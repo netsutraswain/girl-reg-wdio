@@ -7,15 +7,20 @@ export const config: WebdriverIO.Config = {
 
     maxInstances: 1,
 
-    capabilities: [{
-        browserName: 'chrome',
-        'goog:chromeOptions': {
-            args: [
-                '--disable-infobars',
-                '--window-size=1351,900'
-            ]
-        }
-    }],
+   capabilities: [{
+    browserName: 'chrome',
+ 
+    'goog:chromeOptions': {
+        args: [
+            '--headless=new',
+            '--no-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-gpu',
+            '--disable-infobars',
+            '--window-size=1351,900'
+        ]
+    }
+}],
 
     // Show only errors
     logLevel: 'error',
